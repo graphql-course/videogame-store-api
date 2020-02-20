@@ -1,0 +1,18 @@
+type Game {
+  id: String!
+  title: String!
+  platforms: [Platform!]!
+}
+type Platform {
+  id: String!
+  name: String!
+  games: [Game]
+}
+type Query {
+  games: [Game]
+  platforms: [Platform]
+}
+type Mutation {
+  createGame(title: String!, platforms: [String!]): Game
+  deleteGame(id: String): Game
+}
