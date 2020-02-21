@@ -1,4 +1,4 @@
-import { IGame, IPlatform } from './../interfaces';
+import { IGame, IPlatform } from "./../interfaces";
 import { IResolvers } from "graphql-tools";
 import { gamesItems, platformsItems } from "../data/data";
 
