@@ -1,6 +1,6 @@
-import GMR from 'graphql-merge-resolvers';
-import queryGames from './games';
-import queryPlatforms from './platforms';
+import GMR from "graphql-merge-resolvers";
+import queryGames from "./game";
+import queryPlatforms from "./platform";
 const queryResolvers = GMR.merge([
     queryGames,
     queryPlatforms
