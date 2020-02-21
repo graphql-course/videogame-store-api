@@ -16,18 +16,18 @@ const type: IResolvers = {
       return platforms;
     }
   },
-  // Pending to resolve
   Platform: {
     games: (parent: IPlatform) => {
       const { id } = parent;
+      const gameList: any[] = [];
 
-      console.log(parent);
-
-      const games = gamesItems.map(e => {
-        console.log(e.platformsIds);
+      gamesItems.map(e => {
+        if (e.platformsIds.indexOf(id) > -1) {
+          gameList.push(e);
+        }
       });
 
-      return games;
+      return gameList;
     }
   }
 };
