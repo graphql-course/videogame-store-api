@@ -14,21 +14,17 @@ const mutation: IResolvers = {
       return newGame;
     },
 
-    deleteGame: (parent: any, args: IGame) => {
-      const { id } = args;
+    deleteGame: (_: any, { id }) => {
+      let game;
+      for (let i = 0; i < gamesItems.length; i++) {
+        game = gamesItems[i];
+        if (id === game.id) {
+          gamesItems.splice(i, 1);
+          break;
+        }
+      }
 
-      /*const book = books.find(e => e.id === id);
-  
-        let delPos = 0;
-        const elementDelete = books.map( (book, index) => {
-            delPos = 1;
-        });*/
-
-      // Delete select book
-
-      // books.splice(delPos, 1);
-
-      return undefined;
+      return game;
     }
   }
 };
