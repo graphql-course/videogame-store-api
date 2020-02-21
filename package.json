@@ -1,5 +1,5 @@
 {
-  "name": "book-library",
+  "name": "videogame-store-api",
   "version": "1.0.0",
   "description": "Hello world in GraphQL for first steps",
   "main": "build/server.js",
@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mugan86@gmail.com/book-library.git"
+    "url": "git+https://github.com/mugan86@gmail.com/videogame-store-api.git"
   },
   "keywords": [],
   "author": "Anartz Mugika Ledo <mugan86@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mugan86@gmail.com/book-library/issues"
+    "url": "https://github.com/mugan86@gmail.com/videogame-store-api/issues"
   },
-  "homepage": "https://github.com/mugan86@gmail.com/book-library#readme",
+  "homepage": "https://github.com/mugan86@gmail.com/videogame-store-api#readme",
   "engines": {
     "node": "12.16.0"
   },

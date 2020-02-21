@@ -1,19 +1,20 @@
+import { IGame } from './../interfaces/game.interface';
 import { IResolvers } from "graphql-tools";
-import { games } from './../data/data';
+import { gamesItems } from '../data/data';
 const mutation: IResolvers = {
     Mutation: {
-        createGame: (_, { title, platforms }) => {
+        createGame: (_: void, { title, platformsIds }: IGame) => {
     
-          const id = `${games.length + 1}`;
+          const id = `${gamesItems.length + 1}`;
     
-          games.push({
+          gamesItems.push({
             id,
             title,
-            platforms,
+            platformsIds,
           });
         },
     
-        deleteGame: (parent, args) => {
+        deleteGame: (parent: any, args: IGame) => {
           const { id } = args;
     
           /*const book = books.find(e => e.id === id);

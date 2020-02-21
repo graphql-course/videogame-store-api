@@ -1,22 +1,22 @@
-const games = [
+const gamesItems = [
     {
       id: 'gta-v',
       title: 'GTA V',
-      platforms: ['1', '2'],
+      platformsIds: ['1', '2'],
     },
     {
       id: 'lbp-4',
       title: 'Little Big Planet 4',
-      platforms: ['2'],
+      platformsIds: ['2'],
     },
     {
       id: 'uncharted-4',
       title: 'Uncharted 4',
-      platforms: ['2'],
+      platformsIds: ['2'],
     },
   ];
   
-  const platforms = [
+  const platformsItems = [
     {
       id: '1',
       name: 'PC',
@@ -27,4 +27,4 @@ const games = [
     },
   ];
   
-  export { games, platforms };
+  export { gamesItems, platformsItems };

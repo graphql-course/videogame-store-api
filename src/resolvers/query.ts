@@ -1,13 +1,13 @@
 import { IResolvers } from "graphql-tools";
-import { games, platforms } from "./../data/data";
+import { gamesItems, platformsItems } from "../data/data";
 
 const query: IResolvers = {
     Query: {
         games() {
-            return games;
+            return gamesItems;
         },
         platforms() {
-            return platforms;
+            return platformsItems;
         }
     }
 }

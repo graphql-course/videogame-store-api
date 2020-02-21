@@ -1,23 +1,33 @@
+import { IGame, IPlatform } from './../interfaces';
 import { IResolvers } from "graphql-tools";
-import { games, platforms } from "./../data/data";
+import { gamesItems, platformsItems } from "../data/data";
 
 const type: IResolvers = {
   Game: {
-    platforms: parent => {
-      /*let { authorId } = parent;
-
-      const author = authors.find(e => e.id === authorId);
-
-      return author;*/
+    platforms: (parent: IGame) => {
+      let { platformsIds } = parent;
+      const platforms: any[]= [];
+      platformsIds.map(id => {
+        const findItem = platformsItems.find(p => {
+          return id === p.id;
+        });
+        platforms.push(findItem);
+      })
+      return platforms;
     }
   },
+  // Pending to resolve
   Platform: {
-    games: parent => {
-      /*const { id } = parent;
+    games: (parent: IPlatform) => {
+      const { id } = parent;
 
-      const userBooks = books.filter(e => e.author === id);
+      console.log(parent);
 
-      return userBooks;*/
+      const games = gamesItems.map(e => {
+        console.log(e.platformsIds);
+      });
+
+      return games;
     }
   }
 };
