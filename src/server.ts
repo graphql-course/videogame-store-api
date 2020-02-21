@@ -1,18 +1,18 @@
 // Añadir los imports
-import express from 'express';
-import compression from 'compression';
-import cors from 'cors';
-import schema from './schema';
-import { ApolloServer } from 'apollo-server-express';
-import { createServer } from 'http';
-import expressPlayGround from 'graphql-playground-middleware-express';
+import express from "express";
+import compression from "compression";
+import cors from "cors";
+import schema from "./schema";
+import { ApolloServer } from "apollo-server-express";
+import { createServer } from "http";
+import expressPlayGround from "graphql-playground-middleware-express";
 
 async function init() {
     // Inicializamos la aplicación express
     const app = express();
 
     // Añadimos configuración de Cors y compression
-    app.use('*', cors());
+    app.use("*", cors());
 
     app.use(compression());
 
@@ -24,8 +24,8 @@ async function init() {
 
     server.applyMiddleware({ app });
 
-    app.use('/', expressPlayGround({
-        endpoint: '/graphql'
+    app.use("/", expressPlayGround({
+        endpoint: "/graphql"
     }));
 
     const PORT = process.env.PORT || 2369;
