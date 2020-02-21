@@ -13,6 +13,6 @@ type Query {
   platforms: [Platform!]!
 }
 type Mutation {
-  createGame(title: String!, platforms: [String!]): Game
+  createGame(title: String!, platformsIds: [String!]): Game
   deleteGame(id: String): Game
 }
