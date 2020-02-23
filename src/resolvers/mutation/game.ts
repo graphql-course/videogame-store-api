@@ -1,7 +1,7 @@
-import { IGame } from "./../interfaces/game.interface";
+import { IGame } from "../../interfaces/game.interface";
 import { IResolvers } from "graphql-tools";
-import { gamesItems } from "../data/data";
-const mutation: IResolvers = {
+import { gamesItems } from "../../data/data";
+const mutationGame: IResolvers = {
   Mutation: {
     createGame: (_: void, { title, platformsIds }: IGame) => {
       const id = `${gamesItems.length + 1}`;
@@ -29,4 +29,4 @@ const mutation: IResolvers = {
   }
 };
 
-export default mutation;
+export default mutationGame;
