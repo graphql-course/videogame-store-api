@@ -1,6 +1,6 @@
 const gamesItems = [
     {
-      id: '1',
+      id: "1",
       title: "GTA V",
       platformsIds: ["1", "2"],
     },

@@ -1,0 +1,7 @@
+{
+    "rules": {
+        "no-any": true, // No permitir que se use any
+        "curly": true,  // necesario cerrar con llaves if / else / for / do / while
+        "quotemark": [true, "double"] // Dobles comillas
+    }
+}

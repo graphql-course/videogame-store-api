@@ -3,7 +3,7 @@ import { IResolvers } from "graphql-tools";
 import { gamesItems } from "../data/data";
 const mutation: IResolvers = {
   Mutation: {
-    createGame: (_: void, { title, platformsIds }: any) => {
+    createGame: (_: void, { title, platformsIds }: IGame) => {
       const id = `${gamesItems.length + 1}`;
       const newGame = {
         id,
@@ -14,7 +14,7 @@ const mutation: IResolvers = {
       return newGame;
     },
 
-    deleteGame: (_: any, { id }) => {
+    deleteGame: (_: IGame, { id }) => {
       let game;
       for (let i = 0; i < gamesItems.length; i++) {
         game = gamesItems[i];
