@@ -1,0 +1,7 @@
+{
+    "rules": {
+        "no-any": false,
+        "curly": true,
+        "quotemark": [true, "double"]
+    }
+}
